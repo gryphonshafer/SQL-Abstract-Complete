@@ -2,3 +2,6 @@ Revision history for SQL::Abstract::Complete
 
 1.01    Sat Feb 23 16:25:56 PST 2013
         First version, released on an unsuspecting world.
+
+1.03    Mon Jun 10 16:49:35 PDT 2013
+        Switch from Clone::Fast to Storable dclone for deep copy

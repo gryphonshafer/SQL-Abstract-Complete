@@ -14,7 +14,7 @@ WriteMakefile(
     PREREQ_PM => {
         'Test::More'    => 0,
         'SQL::Abstract' => 1.5,
-        'Clone::Fast'   => 0,
+        'Storable'      => 0,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'SQL-Abstract-Complete-*' },

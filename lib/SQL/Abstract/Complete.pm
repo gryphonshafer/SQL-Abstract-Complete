@@ -2,11 +2,11 @@ package SQL::Abstract::Complete;
 use strict;
 use warnings;
 use SQL::Abstract 1.5;
-use Clone::Fast 'clone';
+use Storable 'dclone';
 use vars '@ISA';
 @ISA = 'SQL::Abstract';
 
-our $VERSION = '1.01';
+our $VERSION = '1.03';
 
 sub new {
     my $self = shift;
@@ -31,7 +31,7 @@ sub _sqlcase {
 sub select {
     my ( $self, $tables, $columns, $where, $meta ) = @_;
     $columns = ['*'] unless ( $columns and @{$columns} > 0 );
-    $tables  = clone($tables);
+    $tables  = dclone($tables) if ( ref $tables );
 
     my $columns_sql = $self->_sqlcase('select') . ' ' . _wipe_space(
         ( ref($columns) eq 'SCALAR' ) ? ${$columns}             :
@@ -46,7 +46,10 @@ sub select {
     my $core_table;
     my $tables_sql = join(
         $self->{'part_join'},
-        map { _wipe_space( join( ' ', $self->_sqlcase( shift( @{$_} ) ), @{$_} ) ) } (
+        map { _wipe_space( join( ' ',
+                $self->_sqlcase( shift( @{$_} ) ),
+                grep { defined } @{$_} )
+            ) } (
             ( ref($tables) eq 'SCALAR' ) ? [ undef, ${$tables}              ] :
             ( not ref($tables)         ) ? [ 'from', $self->_quote($tables) ] :
             map {
@@ -324,7 +327,9 @@ L<SQL::Abstract>, L<DBIx::Class>, L<DBIx::Abstract>.
 
 =head1 AUTHOR
 
-Gryphon Shafer, E<lt>gryphon@cpan.orgE<gt>
+Gryphon Shafer E<lt>gryphon@cpan.orgE<gt>.
+
+  code('Perl') || die;
 
 =head1 LICENSE
 
