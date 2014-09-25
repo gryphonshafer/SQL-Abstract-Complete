@@ -1,4 +1,4 @@
-SQL::Abstract::Complete - Generate complete SQL from Perl data structures
+# SQL::Abstract::Complete - Generate complete SQL from Perl data structures
 
 This module was inspired by the excellent SQL::Abstract, from which in
 inherits. However, in trying to use the module, I found that what I really
@@ -7,12 +7,14 @@ by clauses. So, I set out to create a more complete abstract SQL generation
 module. (To be fair, SQL::Abstract kept it's first $table argument
 inflexible for backwards compatibility reasons.)
 
+[![Build Status](https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete.svg)](https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete)
+[![Coverage Status](https://coveralls.io/repos/gryphonshafer/SQL-Abstract-Complete/badge.png)](https://coveralls.io/r/gryphonshafer/SQL-Abstract-Complete)
+
 This module only changes the select() method and adds a small new wrinkle to
 new(). Everything else from SQL::Abstract is inheritted as-is. Consequently,
 you should read the SQL::Abstract documentation before continuing.
 
-
-INSTALLATION
+## Installation
 
 To install this module, run the following commands:
 
@@ -21,7 +23,7 @@ To install this module, run the following commands:
     make test
     make install
 
-SUPPORT AND DOCUMENTATION
+## Support and Documentation
 
 After installing, you can find documentation for this module with the
 perldoc command.
@@ -30,23 +32,14 @@ perldoc command.
 
 You can also look for information at:
 
-    RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=SQL-Abstract-Complete
+- [GitHub](https://github.com/gryphonshafer/SQL-Abstract-Complete "GitHub")
+- [AnnoCPAN](http://annocpan.org/dist/SQL-Abstract-Complete "AnnoCPAN")
+- [CPAN Ratings](http://cpanratings.perl.org/m/SQL-Abstract-Complete "CPAN Ratings")
+- [Search CPAN](http://search.cpan.org/dist/SQL-Abstract-Complete "Search CPAN")
 
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/SQL-Abstract-Complete
+## Author and License
 
-    CPAN Ratings
-        http://cpanratings.perl.org/d/SQL-Abstract-Complete
-
-    Search CPAN
-        http://search.cpan.org/dist/SQL-Abstract-Complete/
-
-
-AUTHOR AND LICENSE
-
-Gryphon Shafer, gryphon@cpan.org
+Gryphon Shafer, [gryphon@cpan.org](mailto:gryphon@cpan.org "Email Gryphon Shafer")
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.4 or,
-at your option, any later version of Perl 5 you may have available.
+it under the same terms as Perl itself.

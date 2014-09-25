@@ -1,12 +1,14 @@
 package SQL::Abstract::Complete;
 use strict;
 use warnings;
+
 use SQL::Abstract 1.5;
 use Storable 'dclone';
+
 use vars '@ISA';
 @ISA = 'SQL::Abstract';
 
-our $VERSION = '1.03';
+our $VERSION = '1.04';
 
 sub new {
     my $self = shift;
@@ -140,7 +142,7 @@ sub select {
 }
 
 1;
-__END__
+
 =pod
 
 =head1 NAME
@@ -334,7 +336,6 @@ Gryphon Shafer E<lt>gryphon@cpan.orgE<gt>.
 =head1 LICENSE
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.4 or,
-at your option, any later version of Perl 5 you may have available.
+it under the same terms as Perl itself.
 
 =cut

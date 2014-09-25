@@ -1,8 +1,6 @@
-#!perl -T
-use Test::More tests => 1;
+#!/usr/bin/env perl
+use Test::Most;
 
-BEGIN {
-    use_ok( 'SQL::Abstract::Complete' ) || print "Bail out!\n";
-}
-
+BEGIN { use_ok('SQL::Abstract::Complete') }
 diag( "Testing SQL::Abstract::Complete $SQL::Abstract::Complete::VERSION, Perl $], $^X" );
+done_testing();

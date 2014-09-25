@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More 'tests' => 22;
+use Test::Most;
 
 use constant MODULE => 'SQL::Abstract::Complete';
 
@@ -147,3 +147,5 @@ is(
 
 is( $sac->_sqlcase('from'), 'FROM', q{$sac->_sqlcase('from')} );
 is( $sac->_sqlcase(undef), '', '$sac->_sqlcase(undef)' );
+
+done_testing;
