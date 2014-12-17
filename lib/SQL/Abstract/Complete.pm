@@ -127,7 +127,11 @@ sub select {
                 _wipe_space($group_by);
             } : undef ),
             ( ( $meta->{'having'} ) ? do {
-                ( my $having = scalar( $self->where( $meta->{'having'} ) ) ) =~ s/\s*WHERE/HAVING/;
+                my ( $having, @having_bind ) = $self->where( $meta->{'having'} );
+                $having =~ s/\s*WHERE/HAVING/;
+                if ( $having and scalar( @having_bind ) ) {
+                    push( @bind, @having_bind );
+                }
                 _wipe_space($having);
             } : undef ),
             ( ( $meta->{'order_by'} ) ? _wipe_space( $self->_order_by( $meta->{'order_by'} ) ) : undef ),
