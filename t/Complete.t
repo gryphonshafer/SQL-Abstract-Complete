@@ -148,4 +148,22 @@ is(
 is( $sac->_sqlcase('from'), 'FROM', q{$sac->_sqlcase('from')} );
 is( $sac->_sqlcase(undef), '', '$sac->_sqlcase(undef)' );
 
+( $sql, @bind ) = $sac->select(
+    'table',
+    ['one'],
+    undef,
+    {   'group_by' => 'two',
+        'having'   => [ { 'MAX(three)' => { '>' => 9 } } ],
+        'order_by' => [ 'one', { '-desc' => 'four' }, 'five' ],
+        'rows'     => 5,
+        'page'     => 3,
+    },
+);
+is( $sql,
+    q{SELECT one FROM table GROUP BY two HAVING ( MAX(three) > ? ) }
+        . q{ORDER BY one, four DESC, five LIMIT 5 OFFSET 10},
+    'Full select() \%other functionality',
+);
+is( @bind, 1, 'Bind param returned' );
+
 done_testing;
