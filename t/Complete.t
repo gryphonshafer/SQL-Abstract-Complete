@@ -164,6 +164,6 @@ is( $sql,
         . q{ORDER BY one, four DESC, five LIMIT 5 OFFSET 10},
     'Full select() \%other functionality',
 );
-is( @bind, 1, 'Bind param returned', );
+is( @bind, 1, 'Bind param returned' );
 
 done_testing;

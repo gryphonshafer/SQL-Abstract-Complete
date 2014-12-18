@@ -129,9 +129,7 @@ sub select {
             ( ( $meta->{'having'} ) ? do {
                 my ( $having, @having_bind ) = $self->where( $meta->{'having'} );
                 $having =~ s/\s*WHERE/HAVING/;
-                if ( $having and scalar( @having_bind ) ) {
-                    push( @bind, @having_bind );
-                }
+                push( @bind, @having_bind ) if ( scalar(@having_bind) );
                 _wipe_space($having);
             } : undef ),
             ( ( $meta->{'order_by'} ) ? _wipe_space( $self->_order_by( $meta->{'order_by'} ) ) : undef ),
