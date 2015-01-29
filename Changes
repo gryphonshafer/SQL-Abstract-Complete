@@ -1,6 +1,8 @@
 Revision history for SQL::Abstract::Complete
 
 {{$NEXT}}
+
+1.06      2015-01-29 15:49:17-08:00 America/Los_Angeles
         - Implementing use of Dist::Zilla
 
 1.05      Thu Dec 18 10:18:29 PST 2014
