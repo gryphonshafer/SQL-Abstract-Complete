@@ -1,4 +1,6 @@
 package SQL::Abstract::Complete;
+# ABSTRACT: Generate complete SQL from Perl data structures
+
 use strict;
 use warnings;
 
@@ -8,7 +10,7 @@ use Storable 'dclone';
 use vars '@ISA';
 @ISA = 'SQL::Abstract';
 
-our $VERSION = '1.05';
+# VERSION
 
 sub new {
     my $self = shift;
@@ -144,18 +146,30 @@ sub select {
 }
 
 1;
+__END__
 
 =pod
 
-=head1 NAME
+=begin :badges
 
-SQL::Abstract::Complete - Generate complete SQL from Perl data structures
+=for markdown
+[![Build Status](https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete.svg)](https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete)
+[![Coverage Status](https://coveralls.io/repos/gryphonshafer/SQL-Abstract-Complete/badge.png)](https://coveralls.io/r/gryphonshafer/SQL-Abstract-Complete)
+
+=end :badges
+
+=begin :prelude
+
+=for test_synopsis
+my( $sql, @bind, @tables, @fields, %where, %other );
+
+=end :prelude
 
 =head1 SYNOPSIS
 
     use SQL::Abstract::Complete;
 
-    my $sac = SQL::Abstract::Complete->new();
+    my $sac = SQL::Abstract::Complete->new;
 
     my ( $sql, @bind ) = $sac->select(
         \@tables, # a table or set of tables and optional aliases
@@ -329,15 +343,14 @@ explicitly set a "limit" value.
 
 L<SQL::Abstract>, L<DBIx::Class>, L<DBIx::Abstract>.
 
-=head1 AUTHOR
+You can also look for additional information at:
 
-Gryphon Shafer E<lt>gryphon@cpan.orgE<gt>.
-
-  code('Perl') || die;
-
-=head1 LICENSE
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+=for :list
+* L<GitHub|https://github.com/gryphonshafer/SQL-Abstract-Complete>
+* L<CPAN|http://search.cpan.org/dist/SQL-Abstract-Complete>
+* L<MetaCPAN|https://metacpan.org/pod/SQL::Abstract::Complete>
+* L<AnnoCPAN|http://annocpan.org/dist/SQL-Abstract-Complete>
+* L<Travis CI|https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete>
+* L<Coveralls|https://coveralls.io/r/gryphonshafer/SQL-Abstract-Complete>
 
 =cut
