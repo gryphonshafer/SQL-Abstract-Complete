@@ -352,5 +352,7 @@ You can also look for additional information at:
 * L<AnnoCPAN|http://annocpan.org/dist/SQL-Abstract-Complete>
 * L<Travis CI|https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete>
 * L<Coveralls|https://coveralls.io/r/gryphonshafer/SQL-Abstract-Complete>
+* L<CPANTS|http://cpants.cpanauthors.org/dist/SQL-Abstract-Complete>
+* L<CPAN Testers|http://www.cpantesters.org/distro/S/SQL-Abstract-Complete.html>
 
 =cut
