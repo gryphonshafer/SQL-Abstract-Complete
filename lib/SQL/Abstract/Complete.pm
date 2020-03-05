@@ -348,9 +348,7 @@ You can also look for additional information at:
 
 =for :list
 * L<GitHub|https://github.com/gryphonshafer/SQL-Abstract-Complete>
-* L<CPAN|http://search.cpan.org/dist/SQL-Abstract-Complete>
 * L<MetaCPAN|https://metacpan.org/pod/SQL::Abstract::Complete>
-* L<AnnoCPAN|http://annocpan.org/dist/SQL-Abstract-Complete>
 * L<Travis CI|https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete>
 * L<Coveralls|https://coveralls.io/r/gryphonshafer/SQL-Abstract-Complete>
 * L<CPANTS|http://cpants.cpanauthors.org/dist/SQL-Abstract-Complete>
