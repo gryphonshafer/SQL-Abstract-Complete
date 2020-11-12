@@ -6,8 +6,8 @@ SQL::Abstract::Complete - Generate complete SQL from Perl data structures
 
 version 1.07
 
-[![Build Status](https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete.svg)](https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/SQL-Abstract-Complete/badge.png)](https://coveralls.io/r/gryphonshafer/SQL-Abstract-Complete)
+[![build](https://github.com/gryphonshafer/SQL-Abstract-Complete/workflows/build/badge.svg)](https://github.com/gryphonshafer/SQL-Abstract-Complete/actions?query=workflow%3Abuild)
+[![codecov](https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete)
 
 # SYNOPSIS
 
@@ -24,16 +24,16 @@ version 1.07
 
 # DESCRIPTION
 
-This module was inspired by the excellent [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract), from which in
+This module was inspired by the excellent [SQL::Abstract](https://metacpan.org/pod/SQL%3A%3AAbstract), from which in
 inherits. However, in trying to use the module, I found that what I really
 wanted to do was generate complete SELECT statements including joins and group
 by clauses. So, I set out to create a more complete abstract SQL generation
-module. (To be fair, [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract) kept it's first `$table` argument
+module. (To be fair, [SQL::Abstract](https://metacpan.org/pod/SQL%3A%3AAbstract) kept it's first `$table` argument
 inflexible for backwards compatibility reasons.)
 
 This module only changes the select() method and adds a small new wrinkle to
-new(). Everything else from [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract) is inheritted as-is. Consequently,
-you should read the [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract) documentation before continuing.
+new(). Everything else from [SQL::Abstract](https://metacpan.org/pod/SQL%3A%3AAbstract) is inheritted as-is. Consequently,
+you should read the [SQL::Abstract](https://metacpan.org/pod/SQL%3A%3AAbstract) documentation before continuing.
 
 # FUNCTIONS
 
@@ -41,7 +41,7 @@ you should read the [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract) docu
 
 The `new()` function takes a list of options and values, and returns
 a new **SQL::Abstract::Complete** object which can then be used to generate SQL.
-This function operates in exactly the same way as the same from [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract)
+This function operates in exactly the same way as the same from [SQL::Abstract](https://metacpan.org/pod/SQL%3A%3AAbstract)
 only it offers one additional option to set:
 
 - part\_join
@@ -141,7 +141,7 @@ specified by the arguments:
 
     This is an optional argument to specify the WHERE clause of the query.
     The argument is most often a hashref. This functionality is entirely
-    inheritted from [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract), so read that fine module's documentation
+    inheritted from [SQL::Abstract](https://metacpan.org/pod/SQL%3A%3AAbstract), so read that fine module's documentation
     for WHERE details.
 
 - \\%other
@@ -169,24 +169,22 @@ specified by the arguments:
         );
 
     The HAVING clause works in the same way as the WHERE clause handling
-    from [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract). (In fact, we're actually calling the same method
+    from [SQL::Abstract](https://metacpan.org/pod/SQL%3A%3AAbstract). (In fact, we're actually calling the same method
     from the parent class.) ORDER BY clause handling is also purely inheritted
-    from [SQL::Abstract](https://metacpan.org/pod/SQL::Abstract). The "rows" and "page" pagination functionality is
-    inspired from [DBIx::Class](https://metacpan.org/pod/DBIx::Class) and operates the same way. Alternatively, you can
+    from [SQL::Abstract](https://metacpan.org/pod/SQL%3A%3AAbstract). The "rows" and "page" pagination functionality is
+    inspired from [DBIx::Class](https://metacpan.org/pod/DBIx%3A%3AClass) and operates the same way. Alternatively, you can
     explicitly set a "limit" value.
 
 # SEE ALSO
 
-[SQL::Abstract](https://metacpan.org/pod/SQL::Abstract), [DBIx::Class](https://metacpan.org/pod/DBIx::Class), [DBIx::Abstract](https://metacpan.org/pod/DBIx::Abstract).
+[SQL::Abstract](https://metacpan.org/pod/SQL%3A%3AAbstract), [DBIx::Class](https://metacpan.org/pod/DBIx%3A%3AClass), [DBIx::Abstract](https://metacpan.org/pod/DBIx%3A%3AAbstract).
 
 You can also look for additional information at:
 
 - [GitHub](https://github.com/gryphonshafer/SQL-Abstract-Complete)
-- [CPAN](http://search.cpan.org/dist/SQL-Abstract-Complete)
 - [MetaCPAN](https://metacpan.org/pod/SQL::Abstract::Complete)
-- [AnnoCPAN](http://annocpan.org/dist/SQL-Abstract-Complete)
-- [Travis CI](https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete)
-- [Coveralls](https://coveralls.io/r/gryphonshafer/SQL-Abstract-Complete)
+- [GitHub Actions](https://github.com/gryphonshafer/SQL-Abstract-Complete/actions)
+- [Codecov](https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete)
 - [CPANTS](http://cpants.cpanauthors.org/dist/SQL-Abstract-Complete)
 - [CPAN Testers](http://www.cpantesters.org/distro/S/SQL-Abstract-Complete.html)
 
@@ -196,7 +194,7 @@ Gryphon Shafer <gryphon@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2018 by Gryphon Shafer.
+This software is copyright (c) 2021 by Gryphon Shafer.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
