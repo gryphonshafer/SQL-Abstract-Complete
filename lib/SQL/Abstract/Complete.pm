@@ -154,8 +154,8 @@ __END__
 =begin :badges
 
 =for markdown
-[![Build Status](https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete.svg)](https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/SQL-Abstract-Complete/badge.png)](https://coveralls.io/r/gryphonshafer/SQL-Abstract-Complete)
+[![build](https://github.com/gryphonshafer/SQL-Abstract-Complete/workflows/build/badge.svg)](https://github.com/gryphonshafer/SQL-Abstract-Complete/actions?query=workflow%3Abuild)
+[![codecov](https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete)
 
 =end :badges
 
@@ -349,8 +349,8 @@ You can also look for additional information at:
 =for :list
 * L<GitHub|https://github.com/gryphonshafer/SQL-Abstract-Complete>
 * L<MetaCPAN|https://metacpan.org/pod/SQL::Abstract::Complete>
-* L<Travis CI|https://travis-ci.org/gryphonshafer/SQL-Abstract-Complete>
-* L<Coveralls|https://coveralls.io/r/gryphonshafer/SQL-Abstract-Complete>
+* L<GitHub Actions|https://github.com/gryphonshafer/SQL-Abstract-Complete/actions>
+* L<Codecov|https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete>
 * L<CPANTS|http://cpants.cpanauthors.org/dist/SQL-Abstract-Complete>
 * L<CPAN Testers|http://www.cpantesters.org/distro/S/SQL-Abstract-Complete.html>
 
