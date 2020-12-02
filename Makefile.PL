@@ -13,7 +13,7 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => 0
   },
   "DISTNAME" => "SQL-Abstract-Complete",
-  "LICENSE" => "perl",
+  "LICENSE" => "artistic_2",
   "MIN_PERL_VERSION" => "5.008",
   "NAME" => "SQL::Abstract::Complete",
   "PREREQ_PM" => {
