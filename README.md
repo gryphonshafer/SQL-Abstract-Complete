@@ -4,7 +4,7 @@ SQL::Abstract::Complete - Generate complete SQL from Perl data structures
 
 # VERSION
 
-version 1.07
+version 1.08
 
 [![test](https://github.com/gryphonshafer/SQL-Abstract-Complete/workflows/test/badge.svg)](https://github.com/gryphonshafer/SQL-Abstract-Complete/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete)
@@ -194,7 +194,7 @@ Gryphon Shafer <gryphon@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2013-2021 by Gryphon Shafer.
+This software is Copyright (c) 2013-2050 by Gryphon Shafer.
 
 This is free software, licensed under:
 
