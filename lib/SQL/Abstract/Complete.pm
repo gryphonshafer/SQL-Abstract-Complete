@@ -35,7 +35,11 @@ sub _sqlcase {
 
 sub select {
     my ( $self, $tables, $columns, $where, $meta ) = @_;
+
+    $columns //= '*';
+    $columns = [$columns] unless ( ref $columns );
     $columns = ['*'] unless ( $columns and @{$columns} > 0 );
+
     $tables  = dclone($tables) if ( ref $tables );
 
     my $columns_sql = $self->_sqlcase('select') . ' ' . _wipe_space(
@@ -299,6 +303,9 @@ There are several ways to specify fields and their respective aliases:
             { 'three' => 'col_three' },
         ],
     );
+
+If this input is undefined, it will be interpretted as C<[*]>; and if this
+input is a scalar string, it will be interpretted as that string in an arrayref.
 
 =item \%where
 
