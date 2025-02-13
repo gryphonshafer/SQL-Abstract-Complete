@@ -4,7 +4,7 @@ SQL::Abstract::Complete - Generate complete SQL from Perl data structures
 
 # VERSION
 
-version 1.09
+version 1.10
 
 [![test](https://github.com/gryphonshafer/SQL-Abstract-Complete/workflows/test/badge.svg)](https://github.com/gryphonshafer/SQL-Abstract-Complete/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/SQL-Abstract-Complete)
