@@ -1,7 +1,7 @@
 package SQL::Abstract::Complete;
 # ABSTRACT: Generate complete SQL from Perl data structures
 
-use 5.008;
+use 5.010;
 use strict;
 use warnings;
 
